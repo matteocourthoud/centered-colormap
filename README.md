@@ -15,11 +15,11 @@ surf(peaks(25));
 colormap(centered), colorbar
 ```
 
-<img src="figures/example1.png" alt="example1" style="zoom:40%;" />
+<img src="figures/example1.png" alt="example1" width="500" />
 
 The function takes different color palettes as arguments.
 
-<img src="figures/palettes.png" alt="palettes" style="zoom:30%;" />
+<img src="figures/palettes.png" alt="palettes" width="500" />
 
 For example, we can use the BrBg palette.
 
@@ -28,4 +28,4 @@ contourf(peaks(25),25,'linestyle','none');
 colormap(centered('BrBg')), colorbar;
 ```
 
-<img src="figures/example2.png" alt="example1" style="zoom:40%;" />
+<img src="figures/example2.png" alt="example2" width="500" />
