@@ -1,20 +1,14 @@
 % Example
 
-% Surface: symmetric
-figure
+% Example 1
+figure;
 surf(peaks(25));
-colormap(centered), colorbar
-save('figures/example1.png')
+colormap(centered), colorbar;
+saveas(gcf,'figures/example1.png');
 
-% Surface: asymmetric positive
-figure
-surf(peaks(25)-2);
-colormap(centered), colorbar
-save('figures/example2.png')
-
-% Surface: asymmetric negative
-figure
-surf(peaks(25)+2);
-colormap(centered), colorbar
-save('figures/example3.png')
+% Example 2
+figure;
+contourf(peaks(25),25,'linestyle','none'); 
+colormap(centered('BrBg')), colorbar;
+saveas(gcf,'figures/example2.png');
 
