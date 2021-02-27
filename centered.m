@@ -1,3 +1,10 @@
+%% Function to generate white-centered color maps
+% Author:  Matteo Courhoud
+% Website: https://matteocourthoud.github.io/
+% Github:  https://github.com/matteocourthoud
+
+
+
 function centeredmap = centered(name, m)
     %   Generate colormap centered on zero
     %

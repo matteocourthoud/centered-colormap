@@ -2,7 +2,7 @@
 
 by [Matteo Courthoud](https://matteocourthoud.github.io/)
 
-package file: `centered.m`
+function file: `centered.m`
 
 example file: `example.m`
 
