@@ -2,7 +2,7 @@
 
 by [Matteo Courthoud](https://matteocourthoud.github.io/)
 
-class file: `centered.m`
+package file: `centered.m`
 
 example file: `example.m`
 
@@ -21,7 +21,7 @@ The function takes different color palettes as arguments.
 
 <img src="figures/palettes.png" alt="palettes" width="500" />
 
-For example, we can use the BrBg palette.
+For example, we can use the `BrBg` palette.
 
 ```
 contourf(peaks(25),25,'linestyle','none'); 
