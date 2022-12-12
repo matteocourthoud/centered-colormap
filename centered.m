@@ -5,7 +5,7 @@
 
 
 
-function centeredmap = centered(name, m)
+function centeredmap = centered(name, m, lims)
     %   Generate colormap centered on zero
     %
     %   Parameters
@@ -15,22 +15,17 @@ function centeredmap = centered(name, m)
     %
     %   m: int, optional
     %       Length of the colormap
-    %       
+    %
     %   Returns
     %   -------
     %   centeredmap: array
     %       Colormap centered on zero
 
-    % Assign optional parameters
-    if nargin == 0
-        name = 'RdBu';
+    arguments
+        name = 'RdBu'
+        m = size(get(gcf,'colormap'), 1)
+        lims = get(gca, 'CLim')
     end
-    if nargin < 2
-        m = size(get(gcf,'colormap'),1);
-    end
-
-    % Find limits of the colormap
-    lims = get(gca, 'CLim');
 
     % Find ratio of negative to positive
     if (lims(1) < 0) && (lims(2) > 0)
@@ -64,13 +59,13 @@ function map = get_map(m, name, option)
     %   ----------
     %   m: int
     %       Length of the colormap
-    %       
+    %
     %   name: str
     %       Name of the colormap, default='RdBu'
     %
     %   option: str
     %       Positive or negative colors only
-    %       
+    %
     %   Returns
     %   -------
     %   map: array
@@ -106,5 +101,5 @@ function map = get_map(m, name, option)
             map = map(15:-1:8,:);
     end
     map = interp1(linspace(0,1,size(map,1)),map/256,linspace(0,1,m));
-    
+
 end
